@@ -46,7 +46,7 @@ To define validation rules, you can use either the HTML5 standard attributes (`r
 For the custom validation rules attribute, you must use the specified syntaxis:
 
 ```html
-data-valy-riles="rule1(option1, option2); rule2(option1, option2);"
+data-valy-rules="rule1(option1, option2); rule2(option1, option2);"
 ```
 
 You can have as many rules as you need, you can also have duplicated rules, with different options (very useful for the **pattern** rule).
