@@ -35,12 +35,7 @@ const EXCLUDED_INPUT_TYPES = [
   'datetime-local'
 ];
 
-const EMAIL_REGEX = new RegExp([
-  '^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@', // [username]@
-  '([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.', // [second-level domain].
-  '(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|onion|[a-z][a-z])|',
-  '([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$' // [top-level domain]
-].join(''), 'i');
+const EMAIL_REGEX = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
 const rulesAttribute = 'data-valy-rules';
 
