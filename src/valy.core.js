@@ -123,7 +123,7 @@ export default class Core {
       .replace(/\\\//g, '@@escapedRegexSlash@@')
 
       // Exclude the regexes from the string
-      .replace(/\/.*?\/\w+/g, match => {
+      .replace(/\/.*?\/\w*/g, match => {
         escapedRegexes.push(match);
 
         return `@@escapedRegex${(escapedRegexes.length - 1)}@@`;
@@ -380,7 +380,7 @@ export default class Core {
           break;
 
         case 'pattern':
-          if (value !== '' && !rule.options[0].test(value)) {
+          if (value !== '' && !(rule.options[0] || rule.options).test(value)) {
             valid = false;
 
             errors.push('pattern');
