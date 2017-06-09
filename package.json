@@ -1,6 +1,6 @@
 {
   "name": "valy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Intuitive frontend form validation",
   "main": "lib/valy.js",
   "scripts": {
