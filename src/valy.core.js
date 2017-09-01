@@ -32,7 +32,8 @@ const EXCLUDED_INPUT_TYPES = [
   'submit',
   'reset',
   'button',
-  'datetime-local'
+  'datetime-local',
+  'hidden'
 ];
 
 const EMAIL_REGEX = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
